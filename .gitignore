@@ -1,0 +1,9 @@
+/node_modules
+/typings
+/tsTypings
+/animations
+*.d.ts
+*.js
+*.map
+*.log
+!gulpfile.js
