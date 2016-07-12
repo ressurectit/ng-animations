@@ -18,6 +18,8 @@ export function slideInOutAnimationConfig(configuration: InOutAnimationsConfig):
                         style(
                         {
                             opacity: 0,
+                            height: 0,
+                            "line-height": 0,
                             "font-size": 0,
                             "margin-top": 0,
                             "padding-top": 0,
@@ -30,6 +32,8 @@ export function slideInOutAnimationConfig(configuration: InOutAnimationsConfig):
                         style(
                         {
                             opacity: 0,
+                            height: "*",
+                            "line-height": "*",
                             "font-size": '*',
                             "margin-top": '*',
                             "padding-top": '*',
@@ -51,6 +55,8 @@ export function slideInOutAnimationConfig(configuration: InOutAnimationsConfig):
                         style(
                         {
                             opacity: 0,
+                            height: "*",
+                            "line-height": "*",
                             "font-size": '*',
                             "margin-top": '*',
                             "padding-top": '*',
@@ -63,6 +69,8 @@ export function slideInOutAnimationConfig(configuration: InOutAnimationsConfig):
                         style(
                         {
                             opacity: 0,
+                            height: 0,
+                            "line-height": 0,
                             "font-size": 0,
                             "margin-top": 0,
                             "padding-top": 0,
