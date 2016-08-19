@@ -19,30 +19,14 @@ export function slideInOutAnimationConfig(configuration: InOutAnimationsConfig):
                         {
                             opacity: 0,
                             height: 0,
-                            "line-height": 0,
-                            "font-size": 0,
-                            "margin-top": 0,
-                            "padding-top": 0,
-                            "margin-bottom": 0,
-                            "padding-bottom": 0,
-                            "border-top-width": 0,
-                            "border-bottom-width": 0,
                             offset: 0
                         }),
                         style(
                         {
-                            opacity: 0,
                             height: "*",
-                            "line-height": "*",
-                            "font-size": '*',
-                            "margin-top": '*',
-                            "padding-top": '*',
-                            "margin-bottom": '*',
-                            "padding-bottom": '*',
-                            "border-top-width": '*',
-                            "border-bottom-width": '*',
                             offset: 0.4
                         }),
+                        style({opacity: '0', offset: 0.25}),
                         style({opacity: '*', offset: 1})
                     ]))
         ]),
@@ -51,35 +35,19 @@ export function slideInOutAnimationConfig(configuration: InOutAnimationsConfig):
             animate(configuration.outTiming,
                     keyframes(
                     [
-                        style({opacity: '*', offset: 0}),
-                        style(
-                        {
-                            opacity: 0,
-                            height: "*",
-                            "line-height": "*",
-                            "font-size": '*',
-                            "margin-top": '*',
-                            "padding-top": '*',
-                            "margin-bottom": '*',
-                            "padding-bottom": '*',
-                            "border-top-width": '*',
-                            "border-bottom-width": '*', 
-                            offset: 0.6
-                        }),
                         style(
                         {
                             opacity: 0,
                             height: 0,
-                            "line-height": 0,
-                            "font-size": 0,
-                            "margin-top": 0,
-                            "padding-top": 0,
-                            "margin-bottom": 0,
-                            "padding-bottom": 0,
-                            "border-top-width": 0,
-                            "border-bottom-width": 0, 
                             offset: 1
-                        })
+                        }),
+                        style(
+                        {
+                            height: "*",
+                            offset: 0.6
+                        }),
+                        style({opacity: '0', offset: 0.75}),
+                        style({opacity: '*', offset: 0})
                     ]))
         ])
     ]);
