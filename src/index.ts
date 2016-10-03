@@ -7,4 +7,6 @@ export {SlideInOutAnimation,
         InOutAnimationsConfig,
         InAnimationsConfig,
         OutAnimationsConfig,
+        FlyInOutAnimation,
+        flyInOutAnimationConfig,
         VISIBLE} from './animations/animations';
