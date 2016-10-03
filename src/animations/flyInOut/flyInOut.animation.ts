@@ -29,7 +29,7 @@ export function flyInOutAnimationConfig(configuration: InOutAnimationsConfig): A
             animate(configuration.outTiming, style(
             {
                 opacity: 0,
-                transform: 'translateY(60%)'
+                transform: 'translateX(60%)'
             }))
         ])
     ]);
@@ -41,5 +41,5 @@ export function flyInOutAnimationConfig(configuration: InOutAnimationsConfig): A
 export const FlyInOutAnimation = flyInOutAnimationConfig(
 {
     inTiming: '400ms ease-in',
-    outTiming: '500ms ease-out'
+    outTiming: '400ms ease-out'
 });
