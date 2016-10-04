@@ -1,4 +1,4 @@
-import {trigger, transition, animate, style, AnimationEntryMetadata} from '@angular/core';
+import {trigger, transition, animate, style, state, AnimationEntryMetadata} from '@angular/core';
 import {InAnimationsConfig} from '../inOutAnimationsConfig';
 
 /**
@@ -15,9 +15,13 @@ export function flyInAnimationConfig(configuration: InAnimationsConfig): Animati
             style(
             {
                 opacity: 0,
-                transform: "translateX(18%)"
+                transform: "translateX(-20%)"
             }),
-            animate(configuration.inTiming)
+            animate(configuration.inTiming, style(
+            {
+                opacity: 1,
+                transform: 'translateX(0)'
+            }))
         ])
     ]);
 };
@@ -27,5 +31,5 @@ export function flyInAnimationConfig(configuration: InAnimationsConfig): Animati
  */
 export const FlyInAnimation = flyInAnimationConfig(
 {
-    inTiming: '400ms 50ms ease-in'
+    inTiming: '400ms ease-in'
 });

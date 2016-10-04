@@ -10,26 +10,25 @@ export function flyInOutAnimationConfig(configuration: InOutAnimationsConfig): A
 {
     return trigger('flyInOut',
     [
-        state('*', style(
-        {
-            opacity: 1,
-            transform: 'translateX(0)'
-        })),
         transition('void => *', 
         [
             style(
             {
                 opacity: 0,
-                transform: 'translateX(-60%)'
+                transform: 'translateX(-20%)'
             }),
-            animate(configuration.inTiming)
+            animate(configuration.inTiming, style(
+            {
+                opacity: 1,
+                transform: 'translateX(0)'
+            }))
         ]),
         transition('* => void', 
         [
             animate(configuration.outTiming, style(
             {
                 opacity: 0,
-                transform: 'translateX(60%)'
+                transform: 'translateX(20%)'
             }))
         ])
     ]);
