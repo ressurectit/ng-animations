@@ -1,7 +1,7 @@
 {
-    "name": "@ng2/animations",
-    "version": "2.2.0",
-    "description": "Angular2 module storing ready animations",
+    "name": "@anglr/animations",
+    "version": "3.0.0-beta.0",
+    "description": "Angular module storing ready animations",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "scripts":
@@ -25,24 +25,23 @@
     "keywords":
     [
         "animations",
-        "angular2",
-        "ng2"
+        "angular",
+        "ng"
     ],
     "author": "kukjevov",
     "license": "MIT",
     "dependencies":
     {
-        "@angular/core": "~2.3.0",
+        "@angular/core": ">=4.0.0-beta.7",
         "core-js": "~2.4.1",
-        "reflect-metadata": "~0.1.8",
-        "zone.js": "~0.7.2",
-        "rxjs": "5.0.0-rc.4"
+        "zone.js": "~0.7.7",
+        "rxjs": "^5.1.1"
     },
     "devDependencies":
     {
         "rimraf": "~2.5.4",
-        "typescript": "2.1.4",
-        "webpack": "2.1.0-beta.27",
+        "typescript": "2.1.6",
+        "webpack": "2.2.1",
         "npm-publish-pkg": "~1.2.0"
     }
 }
