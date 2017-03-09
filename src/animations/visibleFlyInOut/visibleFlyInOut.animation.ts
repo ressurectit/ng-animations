@@ -1,4 +1,4 @@
-import {trigger, transition, animate, style, state, AnimationEntryMetadata} from '@angular/core';
+import {trigger, transition, animate, style, state, AnimationTriggerMetadata} from '@angular/animations';
 import {InOutAnimationsConfig} from '../inOutAnimationsConfig';
 import {VISIBLE} from '../stateNames';
 
@@ -7,7 +7,7 @@ import {VISIBLE} from '../stateNames';
  * @param {InOutAnimationsConfig} configuration Configuration object used for configuring animation
  * @returns AnimationEntryMetadata
  */
-export function visibleFlyInOutAnimationConfig(configuration: InOutAnimationsConfig): AnimationEntryMetadata
+export function visibleFlyInOutAnimationConfig(configuration: InOutAnimationsConfig): AnimationTriggerMetadata
 {
     return trigger('visibleFlyInOut',
     [

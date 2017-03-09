@@ -1,4 +1,4 @@
-import {trigger, transition, animate, style, state, AnimationEntryMetadata} from '@angular/core';
+import {trigger, transition, animate, style, state, AnimationTriggerMetadata} from '@angular/animations';
 import {OutAnimationsConfig} from '../inOutAnimationsConfig';
 
 /**
@@ -6,7 +6,7 @@ import {OutAnimationsConfig} from '../inOutAnimationsConfig';
  * @param {OutAnimationsConfig} configuration Configuration object used for configuring animation
  * @returns AnimationEntryMetadata
  */
-export function flyOutAnimationConfig(configuration: OutAnimationsConfig): AnimationEntryMetadata
+export function flyOutAnimationConfig(configuration: OutAnimationsConfig): AnimationTriggerMetadata
 {
     return trigger('flyOut',
     [

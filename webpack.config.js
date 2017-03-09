@@ -15,9 +15,7 @@ module.exports = function(options)
         },
         externals:
         [
-            /^@ng\/.*$/,
-            /^@angular\/.*$/,
-            /^rxjs\/.*$/
+            /^@angular\/.*$/
         ],
         plugins: []
     };

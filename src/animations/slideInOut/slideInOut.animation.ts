@@ -1,4 +1,4 @@
-import {trigger, transition, animate, keyframes, style, AnimationEntryMetadata} from '@angular/core';
+import {trigger, transition, animate, keyframes, style, AnimationTriggerMetadata} from '@angular/animations';
 import {InOutAnimationsConfig} from '../inOutAnimationsConfig';
 
 /**
@@ -6,7 +6,7 @@ import {InOutAnimationsConfig} from '../inOutAnimationsConfig';
  * @param  {InOutAnimationsConfig} configuration Configuration object used for configuring animation
  * @returns AnimationEntryMetadata
  */
-export function slideInOutAnimationConfig(configuration: InOutAnimationsConfig): AnimationEntryMetadata
+export function slideInOutAnimationConfig(configuration: InOutAnimationsConfig): AnimationTriggerMetadata
 {
     return trigger('slideInOut',
     [
