@@ -21,12 +21,12 @@ export function slideInOutAnimationConfig(configuration: InOutAnimationsConfig):
                             height: 0,
                             offset: 0
                         }),
+                        style({opacity: '0', offset: 0.25}),
                         style(
                         {
                             height: "*",
                             offset: 0.4
                         }),
-                        style({opacity: '0', offset: 0.25}),
                         style({opacity: '*', offset: 1})
                     ]))
         ]),
@@ -41,12 +41,12 @@ export function slideInOutAnimationConfig(configuration: InOutAnimationsConfig):
                             height: 0,
                             offset: 1
                         }),
+                        style({opacity: '0', offset: 0.75}),
                         style(
                         {
                             height: "*",
                             offset: 0.6
                         }),
-                        style({opacity: '0', offset: 0.75}),
                         style({opacity: '*', offset: 0})
                     ]))
         ])
