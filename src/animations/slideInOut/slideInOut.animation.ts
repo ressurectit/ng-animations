@@ -35,19 +35,19 @@ export function slideInOutAnimationConfig(configuration: InOutAnimationsConfig):
             animate(configuration.outTiming,
                     keyframes(
                     [
-                        style(
-                        {
-                            opacity: 0,
-                            height: 0,
-                            offset: 1
-                        }),
-                        style({opacity: '0', offset: 0.75}),
+                        style({opacity: '*', offset: 0}),
                         style(
                         {
                             height: "*",
                             offset: 0.6
                         }),
-                        style({opacity: '*', offset: 0})
+                        style({opacity: '0', offset: 0.75}),
+                        style(
+                        {
+                            opacity: 0,
+                            height: 0,
+                            offset: 1
+                        })
                     ]))
         ])
     ]);
