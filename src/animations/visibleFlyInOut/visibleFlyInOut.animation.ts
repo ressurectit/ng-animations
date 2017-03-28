@@ -21,8 +21,8 @@ export function visibleFlyInOutAnimationConfig(configuration: InOutAnimationsCon
             opacity: '*',
             transform: '*'
         })),
-        transition(`* => ${VISIBLE}`, animate(configuration.inTiming)),
-        transition(`${VISIBLE} => *`, animate(configuration.outTiming))
+        transition(`* => visible`, animate(configuration.inTiming)),
+        transition(`visible => *`, animate(configuration.outTiming))
     ]);
 };
 
