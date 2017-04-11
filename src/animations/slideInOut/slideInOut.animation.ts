@@ -4,7 +4,7 @@ import {InOutAnimationsConfig} from '../inOutAnimationsConfig';
 /**
  * Creates configured SlideInOutAnimation
  * @param  {InOutAnimationsConfig} configuration Configuration object used for configuring animation
- * @returns AnimationEntryMetadata
+ * @returns AnimationTriggerMetadata
  */
 export function slideInOutAnimationConfig(configuration: InOutAnimationsConfig): AnimationTriggerMetadata
 {

@@ -5,7 +5,7 @@ import {VISIBLE} from '../stateNames';
 /**
  * Creates configured VisibleFlyInOutAnimation
  * @param {InOutAnimationsConfig} configuration Configuration object used for configuring animation
- * @returns AnimationEntryMetadata
+ * @returns AnimationTriggerMetadata
  */
 export function visibleFlyInOutAnimationConfig(configuration: InOutAnimationsConfig): AnimationTriggerMetadata
 {

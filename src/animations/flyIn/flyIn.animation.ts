@@ -4,7 +4,7 @@ import {InAnimationsConfig} from '../inOutAnimationsConfig';
 /**
  * Creates configured FlyInAnimation
  * @param {InAnimationsConfig} configuration Configuration object used for configuring animation
- * @returns AnimationEntryMetadata
+ * @returns AnimationTriggerMetadata
  */
 export function flyInAnimationConfig(configuration: InAnimationsConfig): AnimationTriggerMetadata
 {
@@ -15,7 +15,7 @@ export function flyInAnimationConfig(configuration: InAnimationsConfig): Animati
             style(
             {
                 opacity: 0,
-                transform: "translateX(-20%)"
+                transform: "translateX(20%)"
             }),
             animate(configuration.inTiming, style(
             {

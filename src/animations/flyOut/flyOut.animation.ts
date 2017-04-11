@@ -4,7 +4,7 @@ import {OutAnimationsConfig} from '../inOutAnimationsConfig';
 /**
  * Creates configured FlyOutAnimation
  * @param {OutAnimationsConfig} configuration Configuration object used for configuring animation
- * @returns AnimationEntryMetadata
+ * @returns AnimationTriggerMetadata
  */
 export function flyOutAnimationConfig(configuration: OutAnimationsConfig): AnimationTriggerMetadata
 {
@@ -15,7 +15,7 @@ export function flyOutAnimationConfig(configuration: OutAnimationsConfig): Anima
             animate(configuration.outTiming, style(
             {
                 opacity: 0,
-                transform: 'translateX(20%)'
+                transform: 'translateX(-20%)'
             }))
         ])
     ]);
