@@ -4,5 +4,5 @@ export {FlyInAnimation, flyInAnimationConfig} from './animations/flyIn/flyIn.ani
 export {FlyOutAnimation, flyOutAnimationConfig} from './animations/flyOut/flyOut.animation';
 export {FlyInOutAnimation, flyInOutAnimationConfig} from './animations/flyInOut/flyInOut.animation';
 export {VisibleFlyInOutAnimation, visibleFlyInOutAnimationConfig} from './animations/visibleFlyInOut/visibleFlyInOut.animation';
-export {VisibleFadeInAnimation, visibleFadeInAnimationConfig} from './animations/visibleFadeIn/visibleFadeIn.animation';
+export {VisibleFadeInOutAnimation, visibleFadeInOutAnimationConfig} from './animations/visibleFadeInOut/visibleFadeInOut.animation';
 export {VISIBLE} from './animations/stateNames';

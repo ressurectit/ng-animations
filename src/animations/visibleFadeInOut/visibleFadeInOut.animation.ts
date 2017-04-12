@@ -3,23 +3,21 @@ import {InOutAnimationsConfig} from '../inOutAnimationsConfig';
 import {VISIBLE} from '../stateNames';
 
 /**
- * Creates configured VisibleFlyInOutAnimation
+ * Creates configured VisibleFadeInOutAnimation
  * @param {InOutAnimationsConfig} configuration Configuration object used for configuring animation
  * @returns AnimationTriggerMetadata
  */
-export function visibleFlyInOutAnimationConfig(configuration: InOutAnimationsConfig): AnimationTriggerMetadata
+export function visibleFadeInOutAnimationConfig(configuration: InOutAnimationsConfig): AnimationTriggerMetadata
 {
-    return trigger('visibleFlyInOut',
+    return trigger('visibleFadeInOut',
     [
         state('*', style(
         {
             opacity: 0,
-            transform: "translateX(16%)"
         })),
         state(VISIBLE, style(
         {
-            opacity: '*',
-            transform: '*'
+            opacity: '*'
         })),
         transition(`* => visible`, animate(configuration.inTiming)),
         transition(`visible => *`, animate(configuration.outTiming))
@@ -27,10 +25,10 @@ export function visibleFlyInOutAnimationConfig(configuration: InOutAnimationsCon
 };
 
 /**
- * Default VisibleFlyInOutAnimation
+ * Default VisibleFadeInOutAnimation
  */
-export const VisibleFlyInOutAnimation = visibleFlyInOutAnimationConfig(
+export const VisibleFadeInOutAnimation = visibleFadeInOutAnimationConfig(
 {
-    inTiming: '380ms ease-in',
-    outTiming: '380ms ease-out'
+    inTiming: '360ms ease-in',
+    outTiming: '360ms ease-out'
 });
