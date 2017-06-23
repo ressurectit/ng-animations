@@ -4,7 +4,7 @@ export {flyInAnimation, FlyInParams} from "./animations/flyIn/flyIn.animation";
 export {flyOutAnimation, FlyOutParams} from "./animations/flyOut/flyOut.animation";
 export {slideInAnimation, SlideInParams} from "./animations/slideIn/slideIn.animation";
 export {slideOutAnimation, SlideOutParams} from "./animations/slideOut/slideOut.animation";
-export {CssDisplay, CssPosition} from './misc/types';
+export {CssDisplay, CssPosition, CssOverflow} from './misc/types';
 export {fadeInOutTriggerFactory, fadeInOutTrigger} from "./triggers/fadeInOut/fadeInOut.trigger";
 export {flyInTriggerFactory, flyInTrigger} from "./triggers/flyIn/flyIn.trigger";
 export {flyInOutTriggerFactory, flyInOutTrigger} from "./triggers/flyInOut/flyInOut.trigger";

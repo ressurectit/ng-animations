@@ -1,11 +1,11 @@
-import {animation, style, animate, keyframes, AnimationReferenceMetadata} from '@angular/animations';
+import {animation, style, animate, group, AnimationReferenceMetadata} from '@angular/animations';
 
-import {CssPosition, CssDisplay} from "../../misc/types";
+import {CssPosition, CssDisplay, CssOverflow} from "../../misc/types";
 
 /**
  * Type representing slide out params
  */
-export type SlideOutParams = {duration?: string, fromHeight?: string, toHeight?: string, fromOpacity?: number|'*', toOpacity?: number|'*', position?: CssPosition, display?: CssDisplay};
+export type SlideOutParams = {heightDuration?: string, opacityDuration?: string, fromHeight?: string, toHeight?: string, fromOpacity?: number|'*', toOpacity?: number|'*', position?: CssPosition, display?: CssDisplay, overflow?: CssOverflow};
 
 /**
  * Slide out animation
@@ -15,21 +15,14 @@ export const slideOutAnimation: AnimationReferenceMetadata = animation(
     style(
     {
         display: '{{display}}',
-        position: '{{position}}'
+        position: '{{position}}',
+        opacity: '{{fromOpacity}}',
+        height: '{{fromHeight}}',
+        overflow: '{{overflow}}'
     }),
-    animate('{{duration}}', keyframes(
+    group(
     [
-        style({opacity: '{{fromOpacity}}', offset: 0}),
-        style(
-        {
-            height: '{{fromHeight}}',
-            offset: 0.6
-        }),
-        style({opacity: '{{toOpacity}}', offset: 0.75}),
-        style(
-        {
-            height: '{{toHeight}}',
-            offset: 1
-        })
-    ]))
-], {params: <SlideOutParams>{duration: '400ms ease-out', fromHeight: '*', toHeight: '0', fromOpacity: '*', toOpacity: 0, position: 'absolute', display: 'block'}});
+        animate('{{heightDuration}}', style({height: '{{toHeight}}'})),
+        animate('{{opacityDuration}}', style({opacity: '{{toOpacity}}'}))
+    ])
+], {params: <SlideOutParams>{heightDuration: '300ms 100ms ease-in', opacityDuration: '400ms ease-in', fromHeight: '*', toHeight: '0', fromOpacity: '*', toOpacity: 0, position: 'static', display: 'block', overflow: 'hidden'}});

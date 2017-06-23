@@ -1,6 +1,11 @@
 /**
  * Represents css position values
  */
+export type CssOverflow = 'visible'|'hidden'|'scroll'|'auto'|'initial'|'inherit';
+
+/**
+ * Represents css position values
+ */
 export type CssPosition = 'absolute'|'relative'|'fixed'|'static'|'initial'|'inherit';
 
 /**
