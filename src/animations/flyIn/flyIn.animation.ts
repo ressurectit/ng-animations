@@ -1,35 +1,27 @@
-import {trigger, transition, animate, style, state, AnimationTriggerMetadata} from '@angular/animations';
-import {InAnimationsConfig} from '../inOutAnimationsConfig';
+import {animation, style, animate, AnimationReferenceMetadata} from '@angular/animations';
+
+import {CssPosition, CssDisplay} from "../../misc/types";
 
 /**
- * Creates configured FlyInAnimation
- * @param {InAnimationsConfig} configuration Configuration object used for configuring animation
- * @returns AnimationTriggerMetadata
+ * Type representing fly in params
  */
-export function flyInAnimationConfig(configuration: InAnimationsConfig): AnimationTriggerMetadata
-{
-    return trigger('flyIn',
-    [
-        transition('void => *',
-        [
-            style(
-            {
-                opacity: 0,
-                transform: "translateX(20%)"
-            }),
-            animate(configuration.inTiming, style(
-            {
-                opacity: 1,
-                transform: 'translateX(0)'
-            }))
-        ])
-    ]);
-};
+export type FlyInParams = {fromOpacity?: number, toOpacity?: number, position?: CssPosition, display?: CssDisplay, fromX?: string, duration?: string};
 
 /**
- * Default FlyInAnimation
+ * Fly in animation
  */
-export const FlyInAnimation = flyInAnimationConfig(
-{
-    inTiming: '400ms ease-in'
-});
+export const flyInAnimation: AnimationReferenceMetadata = animation(
+[
+    style(
+    {
+        opacity: '{{fromOpacity}}',
+        transform: 'translateX({{fromX}})',
+        display: '{{display}}',
+        position: '{{position}}'
+    }),
+    animate('{{duration}}', style(
+    {
+        opacity: '{{toOpacity}}',
+        transform: 'translateX(0)'
+    }))
+], {params: <FlyInParams>{fromOpacity: 0, toOpacity: 1, position: 'absolute', display: 'block', fromX: '25%', duration: '400ms ease-in'}});

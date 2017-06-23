@@ -1,30 +1,26 @@
-import {trigger, transition, animate, style, state, AnimationTriggerMetadata} from '@angular/animations';
-import {OutAnimationsConfig} from '../inOutAnimationsConfig';
+import {animation, style, animate, AnimationReferenceMetadata} from '@angular/animations';
+
+import {CssPosition, CssDisplay} from "../../misc/types";
 
 /**
- * Creates configured FlyOutAnimation
- * @param {OutAnimationsConfig} configuration Configuration object used for configuring animation
- * @returns AnimationTriggerMetadata
+ * Type representing fly out params
  */
-export function flyOutAnimationConfig(configuration: OutAnimationsConfig): AnimationTriggerMetadata
-{
-    return trigger('flyOut',
-    [
-        transition('* => void',
-        [
-            animate(configuration.outTiming, style(
-            {
-                opacity: 0,
-                transform: 'translateX(-20%)'
-            }))
-        ])
-    ]);
-};
+export type FlyOutParams = {fromOpacity?: number, toOpacity?: number, position?: CssPosition, display?: CssDisplay, toX?: string, duration?: string};
 
 /**
- * Default FlyOutAnimation
+ * Fly out animation
  */
-export const FlyOutAnimation = flyOutAnimationConfig(
-{
-    outTiming: '400ms ease-in'
-});
+export const flyOutAnimation = animation(
+[
+    style(
+    {
+        opacity: '{{fromOpacity}}',
+        display: '{{display}}',
+        position: '{{position}}'
+    }),
+    animate('{{duration}}', style(
+    {
+        opacity: '{{toOpacity}}',
+        transform: 'translateX({{toX}})'
+    }))
+], {params: <FlyOutParams>{fromOpacity: 1, toOpacity: 0, position: 'absolute', display: 'block', toX: '-25%', duration: '400ms ease-out'}});
