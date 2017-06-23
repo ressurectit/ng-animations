@@ -5,7 +5,7 @@ import {CssPosition, CssDisplay} from "../../misc/types";
 /**
  * Type representing fly in params
  */
-export type FlyInParams = {fromOpacity?: number, toOpacity?: number, position?: CssPosition, display?: CssDisplay, fromX?: string, duration?: string};
+export type FlyInParams = {fromOpacity?: number|'*', toOpacity?: number|'*', position?: CssPosition, display?: CssDisplay, fromX?: string, duration?: string};
 
 /**
  * Fly in animation

@@ -5,7 +5,7 @@ import {CssPosition, CssDisplay} from "../../misc/types";
 /**
  * Type representing fly out params
  */
-export type FlyOutParams = {fromOpacity?: number, toOpacity?: number, position?: CssPosition, display?: CssDisplay, toX?: string, duration?: string};
+export type FlyOutParams = {fromOpacity?: number|'*', toOpacity?: number|'*', position?: CssPosition, display?: CssDisplay, toX?: string, duration?: string};
 
 /**
  * Fly out animation
