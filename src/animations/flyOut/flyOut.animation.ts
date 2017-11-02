@@ -10,7 +10,7 @@ export type FlyOutParams = {fromOpacity?: number|'*', toOpacity?: number|'*', po
 /**
  * Fly out animation
  */
-export const flyOutAnimation = animation(
+export const flyOutAnimation: AnimationReferenceMetadata = animation(
 [
     style(
     {
