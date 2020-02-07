@@ -5,7 +5,7 @@ import {SlideOutParams, slideOutAnimation} from "../../animations/slideOut/slide
 
 /**
  * Creates slideInOut trigger for slideInOut animation
- * @param params Parameters 
+ * @param params - Parameters 
  * @returns AnimationTriggerMetadata
  */
 export function slideInOutTriggerFactory(params: {inParams: SlideInParams, outParams: SlideOutParams}): AnimationTriggerMetadata

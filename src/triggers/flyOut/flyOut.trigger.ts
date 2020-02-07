@@ -4,7 +4,7 @@ import {flyOutAnimation, FlyOutParams} from "../../animations/flyOut/flyOut.anim
 
 /**
  * Creates flyOut trigger for flyOut animation
- * @param params Parameters 
+ * @param params - Parameters 
  * @returns AnimationTriggerMetadata
  */
 export function flyOutTriggerFactory(params: FlyOutParams): AnimationTriggerMetadata

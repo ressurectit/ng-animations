@@ -5,7 +5,7 @@ import {FadeOutParams, fadeOutAnimation} from "../../animations/fadeOut/fadeOut.
 
 /**
  * Creates fadeInOut trigger for fadeInOut animation
- * @param params Parameters 
+ * @param params - Parameters 
  * @returns AnimationTriggerMetadata
  */
 export function fadeInOutTriggerFactory(params: {inParams: FadeInParams, outParams: FadeOutParams}): AnimationTriggerMetadata
