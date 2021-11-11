@@ -72,10 +72,10 @@
         "typescript": "4.4.4",
         "npm-git-version": "2.0.0"
     },
-    "module": "./dist/es2015/animations.js",
-    "es2015": "./dist/es2015/animations.js",
-    "es2020": "./dist/es2020/animations.js",
-    "esm2020": "./dist/es2020/animations.js",
+    "module": "./dist/es2015/index.js",
+    "es2015": "./dist/es2015/index.js",
+    "es2020": "./dist/es2020/index.js",
+    "esm2020": "./dist/es2020/index.js",
     "typings": "./animations.d.ts",
     "exports": {
         "./package.json": {
@@ -83,11 +83,11 @@
         },
         ".": {
             "types": "./animations.d.ts",
-            "es2015": "./dist/es2015/animations.js",
-            "es2020": "./dist/es2020/animations.js",
-            "esm2020": "./dist/es2020/animations.js",
-            "node": "./dist/es2015/animations.js",
-            "default": "./dist/es2020/animations.js"
+            "es2015": "./dist/es2015/index.js",
+            "es2020": "./dist/es2020/index.js",
+            "esm2020": "./dist/es2020/index.js",
+            "node": "./dist/es2015/index.js",
+            "default": "./dist/es2020/index.js"
         }
     }
 }
