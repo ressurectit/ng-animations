@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 8.0.2 (2021-11-11)
+
+### Bug Fixes
+
+- fixed order of exports, es2020 first
+
 ## Version 8.0.1 (2021-11-11)
 
 ### Bug Fixes
