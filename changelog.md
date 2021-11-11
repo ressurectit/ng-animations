@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 8.0.1 (2021-11-11)
+
+### Bug Fixes
+
+- fixed paths to exports
+
 ## Version 8.0.0 (2021-11-11)
 
 ### Bug Fixes
