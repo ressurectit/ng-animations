@@ -1,6 +1,6 @@
 import {trigger, transition, useAnimation, AnimationTriggerMetadata} from '@angular/animations';
 
-import {flyInAnimation, FlyInParams} from "../../animations/flyIn/flyIn.animation";
+import {flyInAnimation, FlyInParams} from '../../animations/flyIn/flyIn.animation';
 
 /**
  * Creates flyIn trigger for flyIn animation
@@ -16,7 +16,7 @@ export function flyInTriggerFactory(params: FlyInParams): AnimationTriggerMetada
             useAnimation(flyInAnimation, {params})
         ])
     ]);
-};
+}
 
 /**
  * Default flyIn trigger

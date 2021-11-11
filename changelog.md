@@ -1,5 +1,25 @@
 # Changelog
 
+## Version 8.0.0 (2021-11-11)
+
+### Bug Fixes
+
+- fixed `slideInAnimation`, `slideOutAnimation` animations, now correctly animates height and does not change `display`, with this fixed also `slideInOutTrigger`
+
+### BREAKING CHANGES
+
+- minimal supported version of *Angular* is `13.0.0`
+- compiled as *Angular IVY* **only** with new *APF*
+- removed support of *es5* target and using latest package.json features
+- dropped support of `Node.js <= 12.20`
+- added strict compilation
+
+## Version 7.1.0 (2021-06-10)
+
+### Features
+
+- added new `LocalNotificationsProviderDirective` used for providing `LocalNotificationsService` to local `NotificationsComponent`
+
 ## Version 7.0.0
 
 - updated to latest stable *Angular* 9

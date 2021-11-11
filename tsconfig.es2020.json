@@ -1,0 +1,14 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": 
+    {
+        "sourceMap": true,
+        "inlineSources": true,
+        "rootDir": ".",
+        "outDir": "dist/es2020"
+    },
+    "files":
+    [
+        "index.ts"
+    ]
+}

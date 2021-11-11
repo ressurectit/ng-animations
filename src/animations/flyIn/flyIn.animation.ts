@@ -1,6 +1,6 @@
 import {animation, style, animate, AnimationReferenceMetadata} from '@angular/animations';
 
-import {CssPosition, CssDisplay} from "../../misc/types";
+import {CssPosition, CssDisplay} from '../../misc/types';
 
 /**
  * Type representing fly in params

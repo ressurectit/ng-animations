@@ -1,12 +1,11 @@
 import {trigger, transition, useAnimation, AnimationTriggerMetadata} from '@angular/animations';
 
-import {SlideInParams, slideInAnimation} from "../../animations/slideIn/slideIn.animation";
-import {SlideOutParams, slideOutAnimation} from "../../animations/slideOut/slideOut.animation";
+import {SlideInParams, slideInAnimation} from '../../animations/slideIn/slideIn.animation';
+import {SlideOutParams, slideOutAnimation} from '../../animations/slideOut/slideOut.animation';
 
 /**
  * Creates slideInOut trigger for slideInOut animation
  * @param params - Parameters 
- * @returns AnimationTriggerMetadata
  */
 export function slideInOutTriggerFactory(params: {inParams: SlideInParams, outParams: SlideOutParams}): AnimationTriggerMetadata
 {
@@ -21,7 +20,7 @@ export function slideInOutTriggerFactory(params: {inParams: SlideInParams, outPa
             useAnimation(slideOutAnimation, {params: params.outParams})
         ])
     ]);
-};
+}
 
 /**
  * Default slideInOut trigger

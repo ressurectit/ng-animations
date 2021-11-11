@@ -1,6 +1,6 @@
 import {trigger, transition, useAnimation, AnimationTriggerMetadata} from '@angular/animations';
 
-import {flyOutAnimation, FlyOutParams} from "../../animations/flyOut/flyOut.animation";
+import {flyOutAnimation, FlyOutParams} from '../../animations/flyOut/flyOut.animation';
 
 /**
  * Creates flyOut trigger for flyOut animation
@@ -16,7 +16,7 @@ export function flyOutTriggerFactory(params: FlyOutParams): AnimationTriggerMeta
             useAnimation(flyOutAnimation, {params})
         ])
     ]);
-};
+}
 
 /**
  * Default flyOut trigger

@@ -1,7 +1,7 @@
 import {trigger, transition, useAnimation, AnimationTriggerMetadata} from '@angular/animations';
 
-import {flyOutAnimation, FlyOutParams} from "../../animations/flyOut/flyOut.animation";
-import {FlyInParams, flyInAnimation} from "../../animations/flyIn/flyIn.animation";
+import {flyOutAnimation, FlyOutParams} from '../../animations/flyOut/flyOut.animation';
+import {FlyInParams, flyInAnimation} from '../../animations/flyIn/flyIn.animation';
 
 /**
  * Creates visibleFlyInOut trigger for flyInOut animation
@@ -21,7 +21,7 @@ export function visibleFlyInOutTriggerFactory(params: {inParams: FlyInParams, ou
             useAnimation(flyOutAnimation, {params: params.outParams})
         ])
     ]);
-};
+}
 
 /**
  * Default visibleFlyInOut trigger

@@ -1,7 +1,7 @@
 import {trigger, transition, useAnimation, AnimationTriggerMetadata} from '@angular/animations';
 
-import {FadeInParams, fadeInAnimation} from "../../animations/fadeIn/fadeIn.animation";
-import {FadeOutParams, fadeOutAnimation} from "../../animations/fadeOut/fadeOut.animation";
+import {FadeInParams, fadeInAnimation} from '../../animations/fadeIn/fadeIn.animation';
+import {FadeOutParams, fadeOutAnimation} from '../../animations/fadeOut/fadeOut.animation';
 
 /**
  * Creates fadeInOut trigger for fadeInOut animation
@@ -21,7 +21,7 @@ export function fadeInOutTriggerFactory(params: {inParams: FadeInParams, outPara
             useAnimation(fadeOutAnimation, {params: params.outParams})
         ])
     ]);
-};
+}
 
 /**
  * Default fadeInOut trigger

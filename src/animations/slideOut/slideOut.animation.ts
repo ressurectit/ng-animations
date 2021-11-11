@@ -1,11 +1,9 @@
 import {animation, style, animate, group, AnimationReferenceMetadata} from '@angular/animations';
 
-import {CssPosition, CssDisplay, CssOverflow} from "../../misc/types";
-
 /**
  * Type representing slide out params
  */
-export type SlideOutParams = {heightDuration?: string, opacityDuration?: string, fromHeight?: string, toHeight?: string, fromOpacity?: number|'*', toOpacity?: number|'*', position?: CssPosition, display?: CssDisplay, overflow?: CssOverflow};
+export type SlideOutParams = {heightDuration?: string, opacityDuration?: string, toOpacity?: number};
 
 /**
  * Slide out animation
@@ -14,15 +12,23 @@ export const slideOutAnimation: AnimationReferenceMetadata = animation(
 [
     style(
     {
-        display: '{{display}}',
-        position: '{{position}}',
-        opacity: '{{fromOpacity}}',
-        height: '{{fromHeight}}',
-        overflow: '{{overflow}}'
+        overflow: 'hidden'
     }),
     group(
     [
-        animate('{{heightDuration}}', style({height: '{{toHeight}}'})),
-        animate('{{opacityDuration}}', style({opacity: '{{toOpacity}}'}))
+        animate('{{opacityDuration}}', style(
+        {
+            opacity: '{{toOpacity}}'
+        })),
+        animate('{{heightDuration}}', style(
+        {
+            height: 0,
+            marginTop: 0,
+            marginBottom: 0,
+            borderTopWidth: 0,
+            borderBottomWidth: 0,
+            paddingTop: 0,
+            paddingBottom: 0
+        }))
     ])
-], {params: <SlideOutParams>{heightDuration: '300ms 100ms ease-in', opacityDuration: '400ms ease-in', fromHeight: '*', toHeight: '0', fromOpacity: '*', toOpacity: 0, position: 'static', display: 'block', overflow: 'hidden'}});
+], {params: <SlideOutParams>{heightDuration: '300ms 100ms ease-out', opacityDuration: '400ms ease-out', toOpacity: 0}});
