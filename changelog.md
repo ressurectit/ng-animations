@@ -1,5 +1,13 @@
 # Changelog
 
+## Version 9.0.0 (2021-12-16)
+
+### BREAKING CHANGES
+
+- minimal supported version of *Angular* is `13.1.0`
+- new dependency `@jscrpt/common` version `2.1.0`
+- removed `CssOverflow`, `CssPosition`, `CssDisplay`, now using ones from `@jscrpt/common`
+
 ## Version 8.0.2 (2021-11-11)
 
 ### Bug Fixes

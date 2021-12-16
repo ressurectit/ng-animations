@@ -4,6 +4,8 @@
         "target": "es2020",
         "module": "es2020",
         "moduleResolution": "node",
+        "sourceMap": true,
+        "inlineSources": true,
         "declaration": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
@@ -18,6 +20,8 @@
         "esModuleInterop": true,
         "importHelpers": true,
         "newLine": "lf",
+        "rootDir": ".",
+        "outDir": "es2020",
         "lib":
         [
             "es2020",
@@ -32,8 +36,7 @@
     },
     "exclude":
     [
-        "node_modules",
-        "dist"
+        "node_modules"
     ],
     "angularCompilerOptions":
     {

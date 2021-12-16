@@ -1,6 +1,5 @@
 import {animation, style, animate, AnimationReferenceMetadata} from '@angular/animations';
-
-import {CssPosition, CssDisplay} from '../../misc/types';
+import {CssPosition, CssDisplay} from '@jscrpt/common';
 
 /**
  * Type representing fly out params

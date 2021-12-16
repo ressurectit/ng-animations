@@ -1,9 +1,8 @@
 /node_modules
-/dist
+/es2015
+/es2020
 /docs
 temp/
-
-/*/dist
 
 package-lock.json
 tsdoc-metadata.json
