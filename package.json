@@ -5,10 +5,10 @@
     "type": "module",
     "sideEffects": false,
     "scripts": {
-        "build": "ngc --declaration --declarationDir . --declarationMap && ngc -t es2015 --outDir es2015 && npm run dts:rollup",
+        "build": "ngc --declaration --declarationDir . --declarationMap && ngc -t es2015 --outDir es2015",
         "dts:rollup": "npm run api -- api-extractor.json",
         "api": "api-extractor run --local --verbose -c",
-        "clean": "rimraf temp es2015 es2020 **/tsdoc-metadata.json src/**/*.d.ts src/**/*.d.ts.map */src/**/*.d.ts */src/**/*.d.ts.map ./*.d.ts ./*d.ts.map",
+        "clean": "rimraf */temp temp es2015 es2020 **/tsdoc-metadata.json src/**/*.d.ts src/**/*.d.ts.map */src/**/*.d.ts */src/**/*.d.ts.map ./*.d.ts ./*.d.ts.map */*.d.ts",
         "clean:deps": "rimraf package-lock.json node_modules",
         "clean:all": "npm run clean && npm run clean:deps",
         "ngc": "ngc",
@@ -23,7 +23,8 @@
         "lint": "eslint src/**/*.ts",
         "doc": "path-exists docs && npm run doc:generate || echo \"No docs generated!\"",
         "predoc:generate": "cd docs && git pull && cd ..",
-        "doc:generate": "npm run doc:generate:animations && npm run doc:save",
+        "postdoc:generate": "npm run doc:save",
+        "doc:generate": "npm run doc:generate:animations",
         "doc:save": "cd docs && git add . && git commit -m \"INT: updated API docs ng-animations\" && git push && cd ..",
         "doc:generate:animations": "rimraf docs/content/api/ng-animations && npm run doc:json:animations && npm run doc:md:animations && npm run doc:api:animations",
         "doc:json:animations": "api-extractor run --local --verbose -c api-extractor.json",
@@ -80,13 +81,13 @@
     "es2020": "./es2020/src/index.js",
     "es2015": "./es2015/src/index.js",
     "module": "./es2015/src/index.js",
-    "typings": "./animations.d.ts",
+    "typings": "./src/index.d.ts",
     "exports": {
         "./package.json": {
             "default": "./package.json"
         },
         ".": {
-            "types": "./animations.d.ts",
+            "types": "./src/index.d.ts",
             "esm2020": "./es2020/src/index.js",
             "es2020": "./es2020/src/index.js",
             "es2015": "./es2015/src/index.js",
