@@ -1,6 +1,13 @@
 # Changelog
 
-## Version 9.0.0 (2022-02-22)
+## Version 9.1.0 (2022-04-19)
+
+### Features
+
+- new `animateChildrenAnimation` animation, that animates children animations
+- new `animateChildrenTrigger` trigger, that animates children
+
+## Version 9.0.1 (2022-02-22)
 
 ### Bug Fixes
 
