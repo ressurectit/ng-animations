@@ -9,9 +9,10 @@ import {isPresent} from '@jscrpt/common';
     selector: '.double-right-icon',
     templateUrl: 'doubleRightIcon.component.html',
     styleUrls: ['doubleRightIcon.component.css'],
+    standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DoubleRightIconComponent implements OnDestroy
+export class DoubleRightIconSAComponent implements OnDestroy
 {
     //######################### protected fields #########################
 
@@ -25,12 +26,12 @@ export class DoubleRightIconComponent implements OnDestroy
      */
     protected timeout: number|null = null;
 
-    //######################### public properties - template bindings #########################
+    //######################### protected properties - template bindings #########################
 
     /**
      * Indication whether is icon animated
      */
-    public animating: boolean = false;
+    protected animating: boolean = false;
 
     //######################### constructor #########################
     constructor(protected changeDetector: ChangeDetectorRef)
