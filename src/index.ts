@@ -5,6 +5,7 @@ export {flyOutAnimation, FlyOutParams} from './animations/flyOut/flyOut.animatio
 export {slideInAnimation, SlideInParams} from './animations/slideIn/slideIn.animation';
 export {slideOutAnimation, SlideOutParams} from './animations/slideOut/slideOut.animation';
 export {animateChildrenAnimation} from './animations/animateChildren/animateChildren.animation';
+export * from './components';
 export {fadeInOutTriggerFactory, fadeInOutTrigger} from './triggers/fadeInOut/fadeInOut.trigger';
 export {flyInTriggerFactory, flyInTrigger} from './triggers/flyIn/flyIn.trigger';
 export {flyInOutTriggerFactory, flyInOutTrigger} from './triggers/flyInOut/flyInOut.trigger';

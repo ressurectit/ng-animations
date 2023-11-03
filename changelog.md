@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 10.0.0 (2023-11-03)
+
+### BREAKING CHANGES
+- minimal supported version of `@angular` is `17.0.0`
+- minimal supported version of `tslib` is `2.6.2`
+
 ## Version 9.1.0 (2022-04-19)
 
 ### Features
