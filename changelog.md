@@ -1,12 +1,13 @@
 # Changelog
 
-## Version 10.0.0 (2023-11-03)
+## Version 10.0.0 (2023-11-09)
 
 ### Features
 
 - new `DoubleRightIconSAComponent` component, that is animated double right icon component
 
 ### BREAKING CHANGES
+- minimal supported version of `node.js` is `18`
 - minimal supported version of `@angular` is `17.0.0`
 - minimal supported version of `tslib` is `2.6.2`
 
