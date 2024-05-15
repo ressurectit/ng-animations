@@ -1,0 +1,35 @@
+:host
+{
+    display: block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    overflow: hidden;
+    contain: paint;
+}
+
+.caret-icon
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 400ms;
+    transform-origin: center 50%;
+
+}
+
+.caret-icon.open
+{
+    transform: rotate3d(-1, 0, 0, 180deg);
+}
+
+.caret-icon div
+{
+    transform: rotate(45deg) scale(0.7) translateY(-.25em) translateX(-2px);
+    height: 100%;
+    width: 100%;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-bottom-width: 0.2em;
+    border-right-width: 0.2em;
+}

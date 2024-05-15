@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 10.1.0 (2024-05-15)
+
+### Features
+
+- new `UpDownCaretIconComponent` component, that is animated up down caret icon component
+    - is `standalone`
+
 ## Version 10.0.0 (2023-11-09)
 
 ### Features
