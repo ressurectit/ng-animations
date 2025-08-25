@@ -1,5 +1,36 @@
 # Changelog
 
+## Version 11.0.0 (2025-08-25)
+
+### BREAKING CHANGES
+
+- minimal supported version of `node.js` is `20`
+- minimal supported version of `@angular` is `20.2.0`
+- minimal supported version of `@jscrpt/common` is `7.1.0`
+- minimal supported version of `tslib` is `2.8.1`
+- removed dependency on *deprecated* `@angular/animations`, all animations were replaced with pure css animations placed inside `@css-styles/themes` version `2.1.0`
+- removed `animateChildrenTrigger` animation trigger
+- removed `fadeInOutTriggerFactory` and `fadeInOutTrigger` animation trigger, replaced with `.fade-in` and `.fade-out` css animation
+- removed `flyInTriggerFactory` and `flyInTrigger` animation trigger, replaced with `.fly-in` css animation
+- removed `flyInOutTriggerFactory` and `flyInOutTrigger` animation trigger, replaced with `.fly-in` and `.fly-out` css animation
+- removed `flyOutTriggerFactory` and `flyOutTrigger` animation trigger, replaced with `.fly-out` css animation
+- removed `slideInOutTriggerFactory` and `slideInOutTrigger` animation trigger, replaced with `.slide-in` and `.slide-out` css animation
+- removed `visibleFlyInOutTriggerFactory` and `visibleFlyInOutTrigger` animation trigger
+- removed `VISIBLE` constant
+- removed `animateChildrenAnimation` animation
+- removed `FadeInParams` type
+- removed `fadeInAnimation` animation
+- removed `FadeOutParams` type
+- removed `fadeOutAnimation` animation
+- removed `FlyInParams` type
+- removed `flyInAnimation` animation
+- removed `FlyOutParams` type
+- removed `flyOutAnimation` animation
+- removed `SlideInParams` type
+- removed `slideInAnimation` animation
+- removed `SlideOutParams` type
+- removed `slideOutAnimation` animation
+
 ## Version 10.1.0 (2024-05-15)
 
 ### Features
@@ -14,6 +45,7 @@
 - new `DoubleRightIconSAComponent` component, that is animated double right icon component
 
 ### BREAKING CHANGES
+
 - minimal supported version of `node.js` is `18`
 - minimal supported version of `@angular` is `17.0.0`
 - minimal supported version of `tslib` is `2.6.2`

@@ -8,7 +8,7 @@ import {isPresent} from '@jscrpt/common';
 {
     selector: '.double-right-icon',
     templateUrl: 'doubleRightIcon.component.html',
-    styleUrls: ['doubleRightIcon.component.css'],
+    styleUrl: 'doubleRightIcon.component.css',
     standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -39,7 +39,7 @@ export class DoubleRightIconSAComponent implements OnDestroy
     }
 
     //######################### public methods - implementation of OnDestroy #########################
-    
+
     /**
      * Called when component is destroyed
      */

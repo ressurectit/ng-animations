@@ -1,6 +1,4 @@
-import {Component, ChangeDetectionStrategy, Input, EventEmitter, Output} from '@angular/core';
-
-//TODO: updated to model()
+import {Component, ChangeDetectionStrategy, model, ModelSignal} from '@angular/core';
 
 /**
  * Animated up down caret icon component
@@ -15,19 +13,10 @@ import {Component, ChangeDetectionStrategy, Input, EventEmitter, Output} from '@
 })
 export class UpDownCaretIconComponent
 {
-    //######################### public properties - inputs #########################
+    //######################### public properties - models #########################
 
     /**
      * Indication whether is caret closed or not
      */
-    @Input()
-    public closed: boolean = true;
-
-    //######################### public properties - outputs #########################
-
-    /**
-     * Occurs when closed changes
-     */
-    @Output()
-    public closedChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+    public closed: ModelSignal<boolean> = model(true);
 }
