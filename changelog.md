@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 11.1.0 (2025-09-25)
+
+### Features
+
+- new `AnimateDirective` directive, that is used for enabling enter/leave animations, best use for dynamically created components
+    - **inputs**
+        - `enterAnimation` name or names of animations that are used for entering element
+        - `leaveAnimation` name or names of animations that are used for leaving element
+
 ## Version 11.0.0 (2025-08-25)
 
 ### BREAKING CHANGES
