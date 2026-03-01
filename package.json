@@ -55,7 +55,7 @@
     "devDependencies": {
         "@angular/compiler": "20.2.0",
         "@angular/compiler-cli": "20.2.0",
-        "@angular/core": "20.2.0",
+        "@angular/core": "20.3.17",
         "@angular/language-service": "20.2.0",
         "@jscrpt/common": "7.1.0",
         "@microsoft/api-documenter": "7.26.27",
