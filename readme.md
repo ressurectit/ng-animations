@@ -63,6 +63,86 @@ You can pass multiple animation names as an array:
 </div>
 ```
 
+#### Dynamic component usage
+
+You can attach `AnimateDirective` to a dynamically created component using the `directives` option of `createComponent`. This enables enter/leave animations on a component that has no animation logic of its own.
+
+First, define a simple component with no animation:
+
+```typescript
+import {Component, ChangeDetectionStrategy} from '@angular/core';
+
+@Component(
+{
+    selector: 'simple-dynamic',
+    template: `<div>I am a dynamically created component with no animation logic!</div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class SimpleDynamicComponent
+{
+}
+```
+
+Then create it dynamically with `AnimateDirective` attached via the `directives` property:
+
+```typescript
+import {Component, ChangeDetectionStrategy, ViewContainerRef, ComponentRef, viewChild} from '@angular/core';
+import {AnimateDirective} from '@anglr/animations';
+
+import {SimpleDynamicComponent} from './simpleDynamic.component';
+
+@Component(
+{
+    selector: 'dynamic-sample-view',
+    template: `
+        <button type="button" (click)="create()">Create</button>
+        <button type="button" (click)="destroy()">Destroy</button>
+        <ng-container #container />
+    `,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class DynamicSampleComponent
+{
+    private _componentRef: ComponentRef<SimpleDynamicComponent> | null = null;
+
+    protected container = viewChild.required('container', {read: ViewContainerRef});
+
+    public create(): void
+    {
+        if(this._componentRef)
+        {
+            return;
+        }
+
+        this._componentRef = this.container().createComponent(SimpleDynamicComponent,
+        {
+            directives:
+            [
+                {
+                    type: AnimateDirective,
+                    bindings:
+                    [
+                        inputBinding('enterAnimation', () => 'fade-in'),
+                        inputBinding('leaveAnimation', () => 'fade-out'),
+                    ],
+                },
+            ],
+        });
+    }
+
+    public destroy(): void
+    {
+        if(!this._componentRef)
+        {
+            return;
+        }
+
+        this._componentRef.destroy();
+        this._componentRef = null;
+    }
+}
+```
+
 ---
 
 ### DoubleRightIconSAComponent
