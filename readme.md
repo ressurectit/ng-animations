@@ -36,7 +36,8 @@ import {AnimateDirective} from '@anglr/animations';
 @Component(
 {
     imports: [AnimateDirective],
-    template: `
+    template: 
+    `
         <div animate
              [enterAnimation]="'fadeIn'"
              [leaveAnimation]="'fadeOut'">
@@ -94,7 +95,8 @@ import {SimpleDynamicComponent} from './simpleDynamic.component';
 @Component(
 {
     selector: 'dynamic-sample-view',
-    template: `
+    template: 
+    `
         <button type="button" (click)="create()">Create</button>
         <button type="button" (click)="destroy()">Destroy</button>
         <ng-container #container />
@@ -155,7 +157,8 @@ import {DoubleRightIconSAComponent} from '@anglr/animations';
 @Component(
 {
     imports: [DoubleRightIconSAComponent],
-    template: `
+    template: 
+    `
         <span class="double-right-icon"></span>
     `,
 })
@@ -184,7 +187,8 @@ import {UpDownCaretIconComponent} from '@anglr/animations';
 @Component(
 {
     imports: [UpDownCaretIconComponent],
-    template: `
+    template: 
+    `
         <span class="up-down-caret-icon" [(closed)]="isClosed"></span>
     `,
 })
@@ -203,7 +207,8 @@ export class MyComponent
 Styling example:
 
 ```css
-.up-down-caret-icon {
+.up-down-caret-icon 
+{
     font-size: 16px;
     color: #666;
     cursor: pointer;

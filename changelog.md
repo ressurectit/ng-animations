@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 11.1.1 (2026-05-15)
+
+### Bug Fixes
+
+- fixed missing readme file
+
 ## Version 11.1.0 (2025-09-25)
 
 ### Features
